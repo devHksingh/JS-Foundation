@@ -30,7 +30,6 @@
 
   node fileName.js
 
-[CodeExecution]('../img/Code Execution.png')
 
 Step one is parsing the code file . in which it collect all the keyword (like console)  so that it would be know what to do in this file. This is also knows as kind of tokenization process.
 Next Step is the creation of the syntax tree in this define where to go , what to do.
@@ -41,4 +40,4 @@ In JS now a days whole code is not execute all at once. It just translate the th
 After that conversion phase / translation phase.
 in this it go to byte code (0,1) then it goes to machine code
 
-
+![Code Execution](./img/Code_Execution.png)
