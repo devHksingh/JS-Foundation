@@ -1,46 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>DOM</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="container">
-            <nav>
-                <h1>Logo</h1>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                </ul>
-                
-            </nav>
-        </div>
+      <div class="container">
+        <nav>
+          <h1>Logo</h1>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main id="home">
-        <div class="container">
-            <h2>DOM learning</h2>
-            <p>The Document Object Model (DOM) is an application programming interface (API) for HTML and XML documents. It defines the logical structure of documents and the way a document is accessed and manipulated. In the DOM specification, the term "document" is used in the broad sense - increasingly, XML is being used as a way of representing many different kinds of information that may be stored in diverse systems, and much of this would traditionally be seen as data rather than as documents. Nevertheless, XML presents this data as documents, and the DOM may be used to manage this data.</p>
+      <div class="container">
+        <h2>DOM learning</h2>
+        <p>
+          The Document Object Model (DOM) is an application programming
+          interface (API) for HTML and XML documents. It defines the logical
+          structure of documents and the way a document is accessed and
+          manipulated. In the DOM specification, the term "document" is used in
+          the broad sense - increasingly, XML is being used as a way of
+          representing many different kinds of information that may be stored in
+          diverse systems, and much of this would traditionally be seen as data
+          rather than as documents. Nevertheless, XML presents this data as
+          documents, and the DOM may be used to manage this data.
+        </p>
 
-            <p>With the Document Object Model, programmers can build documents, navigate their structure, and add, modify, or delete elements and content. Anything found in an HTML or XML document can be accessed, changed, deleted, or added using the Document Object Model, with a few exceptions - in particular, the DOM interfaces for the XML internal and external subsets have not yet been specified.</p>
-            <div class="img-container">
-                <h2>The HTML DOM Tree of Objects</h2>
-                <img src="./pics/pic_htmltree.gif" alt="HTML DOM tree">
-            </div>
+        <p>
+          With the Document Object Model, programmers can build documents,
+          navigate their structure, and add, modify, or delete elements and
+          content. Anything found in an HTML or XML document can be accessed,
+          changed, deleted, or added using the Document Object Model, with a few
+          exceptions - in particular, the DOM interfaces for the XML internal
+          and external subsets have not yet been specified.
+        </p>
+        <div class="img-container">
+          <h2>The HTML DOM Tree of Objects</h2>
+          <img src="./pics/pic_htmltree.gif" alt="HTML DOM tree" />
         </div>
-        
+      </div>
     </main>
     <section id="about">
-           <div class="container">
-            <h2>Dummy Post using fetch data from api and DOM manipulation</h2>
-            <p>To genrate Post <a href="#" class="genrate-post">click here</a></p>
-            <div class="post-container">
-                
-            </div>
-           </div>
+      <div class="container">
+        <h2>Dummy Post using fetch data from api and DOM manipulation</h2>
+        <p>To genrate Post <a href="#" class="genrate-post">click here</a></p>
+        <div class="post-container"></div>
+        <div class="pagination-container">
+          <ul class="pagination" id="pagination">
+            <!-- <li><a href="">1</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">3</a></li>
+              <li><a href="">4</a></li>
+              <li><a href="">5</a></li>
+              <li><a href="">6</a></li>
+              <li><a href="">7</a></li>
+              <li><a href="">8</a></li>
+              <li><a href="">9</a></li>
+              <li><a href="">10</a></li> -->
+          </ul>
+        </div>
+      </div>
     </section>
     <script src="./index.js"></script>
-</body>
+  </body>
 </html>
