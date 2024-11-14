@@ -79,6 +79,13 @@ Any JS code that gets executed within the eval function creates and holds its ow
 
  It stores the values in the form of LIFO (last in, first out).Code execution in two phase .First is Memory creation phase . Second is Execution Phase
 
+
+First, the Global Execution Context is created. The first phase is the initialization phase, also known as the Memory Creation Phase, where variables are stored and assigned the value undefined. If a function is present in the code, its definition is stored.
+
+The next phase is the Execution Phase, where variables are assigned values as per the code. When the function is called, it is added to the call stack, and a new Function Execution Context is created. In this context, a new memory creation phase is set up, followed by a new execution thread for the function's scope.
+
+Once the function finishes executing, it is removed (or popped) from the call stack, and the code resumes from the next line, if there are any remaining lines.
+
 Example 1:
 
  ```javascript
