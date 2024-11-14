@@ -131,7 +131,3 @@ anchorTagEl.addEventListener("click", () => {
 });
 
 
-
-
-const url= `https://api.github.com/users/${userName}`
-const userName = form 
