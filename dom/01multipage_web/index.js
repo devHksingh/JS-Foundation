@@ -130,4 +130,74 @@ anchorTagEl.addEventListener("click", () => {
   setupPagination();
 });
 
+const formEl = document.querySelector('#number-form')
+const inputEl = document.querySelector('#num-input')
+const isPrimeEl = document.querySelector('#isPrime')
+const isOddEl = document.querySelector('#isOdd')
+const isEvenEl = document.querySelector('#isEven')
+const sumOfDigitEl = document.querySelector('#sumOfDigit')
+const numberOfDigitEl = document.querySelector('#numberOfDigit')
+const isPalidromeEl = document.querySelector('#isPalidrome')
+
+
+formEl.addEventListener('submit',handleFormSubmit)
+
+let userValue
+let userValueArr
+let isPrime=""
+let isOdd=""
+let isEven=""
+let sumOfDigit = ""
+let numberOfDigit=""
+let isPalidrome=""
+function handleFormSubmit(e){
+  e.preventDefault()
+  userValueArr= (inputEl.value).split('')
+  const revUserArr =[]
+  let OfSum =0
+  for(let i=userValueArr.length-1;i>=0;i--){
+    revUserArr.push(userValueArr.at(i))
+  }
+  
+  isPalidrome = revUserArr.join('') === inputEl.value
+  
+  numberOfDigit= userValueArr.length
+  // console.log(numberOfDigit);
+  let sum =userValueArr.map((num)=>(OfSum=parseInt(num)+OfSum))
+  
+  sumOfDigit=sum.at(-1)
+  isEven=parseInt(inputEl.value)%2===0?true:false
+  isOdd= !isEven
+
+  console.log("isEven",isEven);
+  console.log("isOdd",isOdd);
+  
+  
+  userValue = parseInt(inputEl.value)
+  isPrime= checkPrime(parseInt(inputEl.value))
+  console.log("isPrime",isPrime);
+  
+  isPrimeEl.textContent=isPrime?"true":"false"
+  isEvenEl.textContent=isEven?"true":"false"
+  isOddEl.textContent=isOdd?"true":"false"
+  isPalidromeEl.textContent=isPalidrome?"true":"false"
+  sumOfDigitEl.textContent=sumOfDigit
+  numberOfDigitEl.textContent=numberOfDigit
+}
+
+function checkPrime(num){
+  if(num<=1){
+    return false
+  }
+  if(num === 2 || num === 3){
+    return true
+  }
+  if(num %2 ===0 || num %3===0){return false}
+  for(let i=5;i*i<=num;i+=6){
+    if(num%i ===0 || num %(i+2)===0){
+      return false
+    }
+  }
+  return true
+}
 
